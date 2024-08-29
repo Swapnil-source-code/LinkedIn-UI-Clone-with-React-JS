@@ -1,5 +1,6 @@
 import '../Home/Home-style.css'
 import LeftSideBar from '../LeftSideBar/LeftSideBar'
+import MainContent from '../MainContent/MainContent'
 import Navbar from '../Navbar/Navbar'
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
     <>
       <Navbar/>
       <div className='container'>
-        <LeftSideBar/>
+        <LeftSideBar />
+        <MainContent/>
       </div>
     </>
   )
