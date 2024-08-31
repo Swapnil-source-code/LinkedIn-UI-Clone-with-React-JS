@@ -21,7 +21,7 @@ const LeftSideBar = () => {
             <h1>Rayan Waltone</h1>
             <h3>Web Developer at Microsoft</h3>
             <ul>
-              <li>Your Prpfile Views <span>52</span></li>
+              <li>Your Profile Views <span>52</span></li>
               <li>Your Post Views <span>810</span></li>
               <li>Your Connections <span>205</span></li>
             </ul>
