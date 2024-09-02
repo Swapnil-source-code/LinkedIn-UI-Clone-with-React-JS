@@ -1,0 +1,12 @@
+.profile-footer{
+  padding:  0 10.5% 30px;
+}
+
+.profile-footer .sidebar-useful-link{
+  text-align: left;
+  padding: 0;
+}
+
+.profile-footer .copyright-msg{
+  justify-content: flex-start;
+}

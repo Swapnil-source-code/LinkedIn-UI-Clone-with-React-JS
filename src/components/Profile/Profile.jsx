@@ -15,6 +15,8 @@ import milogo from '../../assets/images/mi-logo.png'
 import user3 from '../../assets/images/user-3.png'
 import user4 from '../../assets/images/user-4.png'
 import user5 from '../../assets/images/user-5.png'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 
 const Profile = () => {
@@ -22,6 +24,7 @@ const Profile = () => {
   
   return (
     <>
+      <Navbar/>
       <div className="p-container">
         {/* Profile-Main */}
         <div className="profile-main">
@@ -186,6 +189,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

@@ -13,6 +13,7 @@ import help from '../../assets/images/help.png'
 import display from '../../assets/images/display.png'
 import logout from '../../assets/images/logout.png'
 import { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -20,9 +21,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -41,7 +42,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="navbar-left">
-          <a href="./index.html" className="logo"><img src={logo} alt="logo" /></a>
+          <Link to="/" className="logo"><img src={logo} alt="logo" /></Link>
           <div className="search-box">
             <img src={search} alt="img" />
             <input type="text" placeholder="Search" />
@@ -67,7 +68,7 @@ const Navbar = () => {
               <img src={user1} />
               <div>
                 <h3>Rayan Walton</h3>
-                <a href="./profile.html">See your profile</a>
+                <Link to="/profile">See your profile</Link>
               </div>
             </div>
             <hr />
