@@ -6,10 +6,18 @@ import premium from '../../assets/images/premium.png'
 import recent from '../../assets/images/recent.png'
 import group from '../../assets/images/group.png'
 import hashtag from '../../assets/images/hashtag.png'
+import  { useState } from 'react';
 
 
 const LeftSideBar = () => {
   
+  // State to manage the activity's visibility
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to toggle the activity's visibility
+  const toggleActivity = () => {
+    setIsOpen(!isOpen);
+  };
   
   return (
     <>
@@ -31,7 +39,7 @@ const LeftSideBar = () => {
             <a href="#"><img src={premium} /> Try Premium</a>
           </div>
         </div>
-        <div className="sidebar-activity" id="sidebar-activity">
+        <div  className={`sidebar-activity ${isOpen ? "open-activity" : ""}`} id="sidebar-activity">
           <h3>RECENT</h3>
           <a href="#"><img src={recent} /> Web Development</a>
           <a href="#"><img src={recent} /> User Interface</a>
@@ -52,7 +60,7 @@ const LeftSideBar = () => {
             <a href="#">Discover more</a>
           </div>
         </div>
-        <p id="ShowMoreLink" onClick="toogleActivity()">Show more +</p>
+        <p id="ShowMoreLink" onClick={toggleActivity}>{isOpen ? 'Show less -' : 'Show more +'}</p>
       </div>
 
     </>
