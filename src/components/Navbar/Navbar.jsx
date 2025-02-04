@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-center">
           <ul>
-            <li><a href="#" className="active-link"><img src={home} /><span>Home</span></a></li>
+          <Link to="/"><li><a href="#" className="active-link"><img src={home} /><span>Home</span></a></li></Link>
             <li><a href="#"><img src={network} /><span>My Network</span></a></li>
             <li><a href="#"><img src={jobs} /><span>Job</span></a></li>
             <li><a href="#"><img src={message} /><span>Messaging</span></a></li>
